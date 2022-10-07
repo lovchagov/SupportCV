@@ -23,6 +23,11 @@ a:hover {
   justify-content: space-evenly;
   gap: 100px;
 }
+@media (max-width: 768px) {
+  .header {
+    justify-content: stretch;
+  }
+}
 
 .header__container {
   display: flex;
@@ -38,6 +43,12 @@ a:hover {
   height: 300px;
   border-radius: 10%;
 }
+@media (max-width: 768px) {
+  .header__photo img {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .header__text {
   display: flex;
@@ -45,12 +56,27 @@ a:hover {
   justify-content: space-around;
   width: 50%;
 }
+@media (max-width: 1300px) {
+  .header__text {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .header__text {
+    width: 20%;
+  }
+}
 
 .header__lang {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+  .header__lang {
+    transform: rotate(90deg);
+  }
 }
 
 .header__name {
@@ -98,10 +124,20 @@ main {
   gap: 10px;
   line-height: 20px;
 }
+@media (max-width: 768px) {
+  .education__and__work {
+    display: block;
+  }
+}
 
 .education__and__lang {
   width: 720px;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  .education__and__lang {
+    width: auto;
+  }
 }
 
 .education {
@@ -217,6 +253,11 @@ main {
 .line {
   width: 2px;
   background-color: black;
+}
+@media (max-width: 768px) {
+  .line {
+    display: none;
+  }
 }
 
 .skills {

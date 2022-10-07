@@ -27,6 +27,9 @@ a {
     display: flex;
     justify-content: space-evenly;
     gap: 100px;
+    @media (max-width:768px) {
+        justify-content: stretch;
+    }
 }
 
 .header__container {
@@ -42,6 +45,10 @@ a {
         width: 300px;
         height: 300px;
         border-radius: 10%;
+        @media (max-width:768px) {
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 
@@ -50,6 +57,12 @@ a {
     flex-direction: column;
     justify-content: space-around;
     width: 50%;
+    @media (max-width:1300px) {
+        width: 30%;
+    }
+    @media (max-width:768px) {
+        width: 20%;
+    }
 }
 
 .header__lang {
@@ -57,6 +70,10 @@ a {
     align-items: flex-start;
     gap: 10px;
     font-size: 1.1rem;
+
+    @media (max-width:768px) {
+        transform: rotate(90deg);
+    }
 }
 
 .header__title {}
@@ -108,11 +125,17 @@ main {
     display: flex;
     gap: 10px;
     line-height: 20px;
+    @media (max-width:768px) {
+        display: block;
+    }
 }
 
 .education__and__lang{
     width: 720px;
    padding: 50px;
+   @media (max-width:768px) {
+    width: auto;
+}
 }
 
 .education {
@@ -233,6 +256,9 @@ main {
 .line {
     width: 2px;
     background-color: black;
+    @media (max-width:768px) {
+        display: none;
+    }
 }
 
 .skills {
