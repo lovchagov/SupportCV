@@ -22,8 +22,10 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
+  flex-shrink: 1;
+  transition: all 3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 789px) {
   .header {
     justify-content: stretch;
   }
@@ -33,17 +35,23 @@ a:hover {
   display: flex;
   justify-content: space-between;
   width: 75%;
+  flex-shrink: 1;
 }
 
 .header__photo {
   margin-left: 50px;
+}
+@media (max-width: 789px) {
+  .header__photo {
+    margin-left: 0;
+  }
 }
 .header__photo img {
   width: 300px;
   height: 300px;
   border-radius: 10%;
 }
-@media (max-width: 768px) {
+@media (max-width: 789px) {
   .header__photo img {
     width: 100px;
     height: 100px;
@@ -54,37 +62,57 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 50%;
+  padding: 15px;
 }
-@media (max-width: 1300px) {
-  .header__text {
-    width: 30%;
-  }
+.header__switchers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-@media (max-width: 768px) {
-  .header__text {
-    width: 20%;
+@media (max-width: 789px) {
+  .header__switchers {
+    transform: rotate(90deg);
+    margin-top: 20px;
   }
 }
 
-.header__lang {
+.header__lang,
+.header__theme {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 1.1rem;
-}
-@media (max-width: 768px) {
-  .header__lang {
-    transform: rotate(90deg);
-  }
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
 }
 
 .header__name {
   font-size: 2rem;
+  margin-bottom: 10px;
+}
+@media (max-width: 789px) {
+  .header__name {
+    font-size: 1.5rem;
+  }
 }
 
 .header__subname {
   font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+@media (max-width: 789px) {
+  .header__subname {
+    font-size: 1.2;
+  }
+}
+
+.header__contacts > a {
+  transition: all 3s ease;
 }
 
 .header__icon {
@@ -115,6 +143,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
+  transition: all 3s ease;
 }
 
 .education__and__work {
@@ -124,7 +153,7 @@ main {
   gap: 10px;
   line-height: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 789px) {
   .education__and__work {
     display: block;
   }
@@ -134,7 +163,7 @@ main {
   width: 720px;
   padding: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 789px) {
   .education__and__lang {
     width: auto;
   }
@@ -150,6 +179,7 @@ main {
   line-height: 40px;
   background-color: #DDDDDD;
   border-radius: 10px;
+  transition: all 3s ease;
 }
 .education__header:before {
   content: "+ ";
@@ -186,10 +216,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.item {
-  margin-bottom: 40px;
 }
 
 .item__company {
@@ -254,7 +280,7 @@ main {
   width: 2px;
   background-color: black;
 }
-@media (max-width: 768px) {
+@media (max-width: 789px) {
   .line {
     display: none;
   }
@@ -313,7 +339,6 @@ main {
   position: relative;
   width: 3em;
   height: 1.6em;
-  margin-bottom: 20px;
   border-radius: 1em;
   background: #f3f3f3;
   box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
@@ -343,6 +368,48 @@ main {
 }
 
 .toggle-pill input[type=checkbox]:checked + label:before {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1.6em;
+}
+
+.toggle-pill2 input[type=checkbox] {
+  display: none;
+}
+
+.toggle-pill2 input[type=checkbox] + label {
+  display: block;
+  position: relative;
+  width: 3em;
+  height: 1.6em;
+  border-radius: 1em;
+  background: #f3f3f3;
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: background 0.1s ease-in-out;
+}
+
+.toggle-pill2 input[type=checkbox] + label:before {
+  content: "";
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  background: #50565a;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-pill2 input[type=checkbox]:checked + label {
+  background: #fff;
+}
+
+.toggle-pill2 input[type=checkbox]:checked + label:before {
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
   left: 1.6em;
 }/*# sourceMappingURL=style.css.map */

@@ -12,13 +12,14 @@ const langEN = {
     'lang': 'en',
     'header': ['Maxim Lovchagov', 'Support Engineer'],
     'education': ["Education", 'Far East State Transportation University', 'Telecommunications engineer', 'September 2013 - May 2018', 'Front-end developer', 'May 2022 - Current time', 'Stage #0 Certificate'],
-    'language': ['Language', 'English', 'Intermediate (I worked as Technical Support Engeener and communicated with staff from different countries. Most of all by e-mail but phone calls were too.', 'Russian', 'Native'],
+    'language': ['Language', 'English', 'Intermediate (I worked as Technical Support Engeener and communicated with staff from different countrys. Most of all by e-mail but phone calls were too.', 'Russian', 'Native'],
     'skills': ['Skills', 'Basic skills', 'Network', 'Switches: CLI of diffrent vendors (Cisco, Huawei, Brocade etc), mainly L2 - Basic Configuration and Diagnosing', 'Controllers: Aruba, Ruckus - Basic Configuration and Diagnosing', 'Monitoring: Grafana, Solarwinds', 'SIP: VOIP-Gateways of diffrent vendors and SIP-telephones', 'Also have experience with WEB-Interface of diffrent ADSL-modems, ONTS, OLTs, wireless routers, access points and another network staff'],
-    'work': ['Experience', 'Rostelecom', 'First category technical support engineer (2nd line) (B2C)', 'December 2018 - September 2020', 'Troubleshooting and resolving issues with network, TV-systems, SIP. Monitoring network. Creation and escalation of mass incidents. Communicating with another departments for fast resolve incidents.', 'Technical support engineer (B2B)', 'October 2020 - September 2021', 'Troubleshooting and resolving issues with network, TV-systems, users\'s PCs. Communicate with hotels and vendors of diffrent countries. Communicating with another departments for fast resolve. Responsibilities of the system administrator.', 'Gazprom-Neft ITO', 'Leading Specialist of Infrastructure Monitoring Department', 'October 2021 - Current time', 'Coordination of technical support services within business-critical services. Monitoring network and servers within business-critical services. Creation and escalation of mass incidents. Communicating with another departments for fast resolve incidents.']
+    'work': ['Experience', 'Rostelecom', 'First category technical support engineer (2nd line) (B2C)', 'December 2018 - September 2020', 'Troubleshooting and resolving issues with network, TV-systems, SIP. Monitoring network. Creation and escalation of mass incidents. Communicating with another departments for fast resolve incidents.', 'Technical support engineer (B2B)', 'October 2020 - September 2021', 'Troubleshooting and resolving issues with network, TV-systems, users\'s PCs. Communicate with hotels and vendors of diffrent countrys. Communicating with another departments for fast resolve. Responsibilities of the system administrator.', 'Gazprom-Neft ITO', 'Leading Specialist of Infrastructure Monitoring Department', 'October 2021 - Current time', 'Coordination of technical support services within business-critical services. Monitoring network and servers within business-critical services. Creation and escalation of mass incidents. Communicating with another departments for fast resolve incidents.']
 }
 
 
-
+const header = document.querySelector('.header');
+const headerContacts = document.querySelectorAll('.header__contacts > a');
 const headerName = document.querySelector('.header__name');
 const headerSubName = document.querySelector('.header__subname');
 const educationHeader = document.querySelector('.education__header');
@@ -38,6 +39,8 @@ const networkSkillsItems = document.querySelectorAll('.network__skills__item');
 const workTitle = document.querySelector('.work__title');
 const workCompany = document.querySelectorAll('.item__company');
 const workDescribe = document.querySelectorAll('.item__describe');
+const mainBlock = document.querySelector('.main');
+const line = document.querySelector('.line')
 
 let lang = langEN;
 
@@ -48,9 +51,46 @@ function languageChange() {
     else
         lang = langRU;
     setTimeout(languageChange, 1000);
-    console.log(lang)
 }
 languageChange();
+
+const theme = document.querySelector('.pill2');
+
+
+function themeChange() {
+    if (theme.checked) {
+        header.style.backgroundColor = 'black';
+        header.style.color = 'white';
+        headerContacts.forEach(element => {
+            element.style.color = 'white';
+        });
+        mainBlock.style.backgroundColor = '#1A241F';
+        mainBlock.style.color = 'white';
+        educationHeader.style.color = '#30565A';
+        languageHeader.style.color = '#30565A';
+        skillsHeader.style.color = '#30565A';
+        workTitle.style.color = '#30565A';
+        line.style.backgroundcolor = '#30565A';
+    }
+    else {
+        header.style.backgroundColor = '#DDDDDD';
+        header.style.color = '#30565A';
+        headerContacts.forEach(element => {
+            element.style.color = '#30565A';
+        });
+        mainBlock.style.backgroundColor = 'white';
+        mainBlock.style.color = '#30565A';
+
+        educationHeader.style.backgroundColor = '#DDDDDD';
+        languageHeader.style.backgroundColor = '#DDDDDD';
+        skillsHeader.style.backgroundColor = '#DDDDDD';
+        workTitle.style.backgroundColor = '#DDDDDD';
+        line.style.backgroundColor = '#DDDDDD';
+    };
+    setTimeout(themeChange, 1000);
+}
+themeChange();
+
 
 function languageChangeCont() {
     headerName.textContent = lang.header[0];
