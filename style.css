@@ -156,6 +156,7 @@ main {
 @media (max-width: 789px) {
   .education__and__work {
     display: block;
+    width: 100%;
   }
 }
 
@@ -166,6 +167,7 @@ main {
 @media (max-width: 789px) {
   .education__and__lang {
     width: auto;
+    padding: 10px;
   }
 }
 
@@ -193,7 +195,7 @@ main {
 .workcontainer {
   display: flex;
   gap: 20px;
-  padding: 50px;
+  padding: 10px;
 }
 
 .work__title {
