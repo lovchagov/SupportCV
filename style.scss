@@ -25,7 +25,6 @@ a {
 .header {
     padding: 30px;
     background-color: $grey;
-    min-width: 500px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -34,7 +33,7 @@ a {
     transition: all 3s ease;
 
     @media (max-width:789px) {
-        justify-content: stretch;
+        justify-content: space-between;
     }
 }
 
@@ -43,12 +42,20 @@ a {
     justify-content: space-between;
     width: 75%;
     flex-shrink: 1;
+
+    @media (max-width:789px) {
+        width: 100%;
+        flex-direction: column;
+    }
+
+   
 }
 
 .header__photo {
     margin-left: 50px;
 
     @media (max-width:789px) {
+        order: 2;
         margin-left: 0;
     }
 
@@ -72,17 +79,22 @@ a {
 
     @media (max-width:1300px) {}
 
-    @media (max-width:789px) {}
+    @media (max-width:789px) {
+        order: 3;
+    }
 }
 
 .header__switchers {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
     height: fit-content;
 
     @media (max-width:789px) {
-        transform: rotate(90deg);
+        // transform: rotate(90deg);
+        align-self: flex-end;
+        order: 1;
         margin-top: 20px;
     }
 }
@@ -149,12 +161,14 @@ a {
 
 main {
     padding: 30px;
-    min-width: 500px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     gap: 100px;
     transition: all 3s ease;
+
+    @media (max-width:789px) {
+
+    }
 }
 
 .education__and__work {
@@ -205,7 +219,11 @@ main {
 .workcontainer {
     display: flex;
     gap: 20px;
-    padding: 10px;
+    padding: 50px;
+
+    @media (max-width:789px) {
+        padding: 10px;
+    }
 }
 
 .work__title {

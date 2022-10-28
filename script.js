@@ -10,7 +10,7 @@ const langRU = {
 
 const langEN = {
     'lang': 'en',
-    'header': ['Maxim Lovchagov', 'Support Engineer'],
+    'header': ['Maxim Lovchagov', 'Technical Support Engineer'],
     'education': ["Education", 'Far East State Transportation University', 'Telecommunications engineer', 'September 2013 - May 2018', 'Front-end developer', 'May 2022 - Current time', 'Stage #0 Certificate'],
     'language': ['Language', 'English', 'Intermediate (I worked as Technical Support Engeener and communicated with staff from different countrys. Most of all by e-mail but phone calls were too.', 'Russian', 'Native'],
     'skills': ['Skills', 'Basic skills', 'Network', 'Switches: CLI of diffrent vendors (Cisco, Huawei, Brocade etc), mainly L2 - Basic Configuration and Diagnosing', 'Controllers: Aruba, Ruckus - Basic Configuration and Diagnosing', 'Monitoring: Grafana, Solarwinds', 'SIP: VOIP-Gateways of diffrent vendors and SIP-telephones', 'Also have experience with WEB-Interface of diffrent ADSL-modems, ONTS, OLTs, wireless routers, access points and another network staff'],
