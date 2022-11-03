@@ -1,4 +1,5 @@
 $grey: #DDDDDD;
+$font-title: 'Noto Serif', serif;
 
 
 body {
@@ -47,8 +48,10 @@ a {
         width: 100%;
         flex-direction: column;
     }
+}
 
-   
+.header__title {
+    font-family: $font-title;
 }
 
 .header__photo {
@@ -172,7 +175,7 @@ main {
 }
 
 .education__and__work {
-    width: 65%;
+    min-width: 65%;
     margin: 0 auto;
     display: flex;
     gap: 10px;
@@ -199,8 +202,9 @@ main {
 }
 
 .education__header {
+    font-family: $font-title;
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 40px;
     background-color: $grey;
     border-radius: 10px;
@@ -210,10 +214,17 @@ main {
         content: '+ ';
         color: #30565A;
         background-color: #30565A;
-        margin-right: 50px;
+        margin-left: 5px;
+        margin-right: 25px;
         height: 100%;
         border-radius: 10px;
     }
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .workcontainer {
@@ -227,17 +238,20 @@ main {
 }
 
 .work__title {
-    font-size: 2rem;
+    font-family: $font-title;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
     line-height: 40px;
     background-color: $grey;
-    margin-bottom: 30px;
     border-radius: 10px;
+    transition: all 3s ease;
 
     &:before {
         content: '+ ';
         color: #30565A;
         background-color: #30565A;
-        margin-right: 50px;
+        margin-left: 5px;
+        margin-right: 25px;
         height: 100%;
         border-radius: 10px;
     }
@@ -293,17 +307,20 @@ main {
 }
 
 .language__header {
-    font-size: 2rem;
+    font-family: $font-title;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
     line-height: 40px;
     background-color: $grey;
-    margin-bottom: 30px;
     border-radius: 10px;
+    transition: all 3s ease;
 
     &:before {
         content: '+ ';
         color: #30565A;
         background-color: #30565A;
-        margin-right: 50px;
+        margin-left: 5px;
+        margin-right: 25px;
         height: 100%;
         border-radius: 10px;
     }
@@ -328,20 +345,28 @@ main {
 }
 
 .skills__header {
-    font-size: 2rem;
+    font-family: $font-title;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
     line-height: 40px;
     background-color: $grey;
-    margin-bottom: 30px;
     border-radius: 10px;
+    transition: all 3s ease;
 
     &:before {
         content: '+ ';
         color: #30565A;
         background-color: #30565A;
-        margin-right: 50px;
+        margin-left: 5px;
+        margin-right: 25px;
         height: 100%;
         border-radius: 10px;
     }
+
+    @media (max-width:888px) and (min-width:768px) {
+font-size: 1.2rem;
+    }
+
 }
 
 
