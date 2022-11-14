@@ -164,11 +164,15 @@ a {
 }
 
 main {
+    transition: all 2s ease; 
+}
+
+.main {
     padding: 30px;
     display: flex;
     justify-content: space-evenly;
     gap: 100px;
-    transition: all 3s ease;
+    transition: all 2s ease;
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
@@ -378,6 +382,7 @@ font-size: 1.2rem;
 
 .skills__basic {
     display: flex;
+    align-items: center;
     gap: 5px;
     margin-bottom: 5px;
 }
@@ -391,12 +396,16 @@ font-size: 1.2rem;
 }
 
 .skills__title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
 .skills__titleicon {
     display: flex;
+    align-items: center;
     gap: 5px;
 
 }

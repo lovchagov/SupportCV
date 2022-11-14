@@ -39,7 +39,7 @@ const networkSkillsItems = document.querySelectorAll('.network__skills__item');
 const workTitle = document.querySelector('.work__title');
 const workCompany = document.querySelectorAll('.item__company');
 const workDescribe = document.querySelectorAll('.item__describe');
-const mainBlock = document.querySelector('.main');
+const mainBlock = document.querySelector('main');
 const line = document.querySelector('.line')
 
 let lang = langEN;
