@@ -298,7 +298,14 @@ main {
     font-style: italic;
 }
 
-.item__describe {}
+.item__describe {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p {
+        font-size: 1.1rem;
+    }
+}
 
 .education__item {
     display: flex;
@@ -496,4 +503,16 @@ font-size: 1.2rem;
 .toggle-pill2 input[type="checkbox"]:checked+label:before {
     box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
     left: 1.6em;
+}
+
+.first {
+    order: 3;
+}
+
+.second {
+    order: 4
+}
+
+.third {
+    order: 5;
 }
